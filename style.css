@@ -276,3 +276,73 @@ header {
     position: relative;
   }
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 1.5rem;
+
+  /* Add this */
+  height: 8rem;          /* Fix header height */
+  box-sizing: border-box;
+}
+
+.logo img {
+
+
+  display: block;
+    align-self: flex-start;
+}
+
+.logo {
+  display: flex;           /* make the div a flex container */
+  align-items: flex-start; /* align children to top */
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  display: block;          /* remove inline spacing issues */
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;  /* ensure image aligns to top */
+  max-height: 70px;        /* or your desired max height */
+  width: auto;  /* Set a fixed width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+.logo img {
+  position: relative;
+  top: 20px; /* moves image down 20px from its normal spot */
+  top: -0.8rem
+}
+
+@media (max-width: 768px) {
+  .logo {
+    position: relative;
+    left: -10rem;
+  }
+
+  .logo img {
+    position: absolute;
+    top: -2rem;
+    max-height: 70px;
+  }
+}
+
+.hamburger {
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
+}
+
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  background: transparent !important;
+  color: inherit !important;
+  outline: none; /* Optional: remove focus outline */
+}
