@@ -1,0 +1,103 @@
+/* style.css */
+
+:root {
+  --gold: #d4af37;
+  --white: #ffffff;
+  --accent: #f0e6d2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: #383838;
+  font-family: font\Didot Regular.ttf;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: #383838;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid var(--gold);
+  font-size: 0.9rem;
+}
+
+/* Add border to all sections with class hero */
+section.hero {
+  padding: 16px;          /* some spacing inside */
+  margin-bottom: 1px;    /* space between sections */
+  box-sizing: border-box; /* include padding & border in size */
+  border-radius: 6px;     /* optional: rounded corners */
+}
