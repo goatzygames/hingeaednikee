@@ -10,15 +10,16 @@
   <meta name="author" content="Hingeaednik" />
   
   <!-- Favicon -->
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-  <link rel="manifest" href="/site.webmanifest" />
+<link rel="icon" href="pics/Logo_ümmargune_tekstita-Photoroom.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="pics/Logo_ümmargune_tekstita-Photoroom.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Hingeaednik" />
+  <meta property="og:title" content="Jooga|Mentor|Aednik" />
   <meta property="og:description" content="Hingega luues. Südamest tegutsedes." />
-  <meta property="og:image" content="pics/Logo_ümmargune_tekstita-Photoroom.png" />
+  <meta property="og:image" content="https://i.ibb.co/5mvFQ80/Logo-mmargune-tekstita-Photoroom.png" />
   <meta property="og:url" content="https://hingeaednik.ee" />
   
   <!-- Twitter -->
@@ -80,7 +81,7 @@ jaoks on vaja ennekõike endal valmis küpseda, kuna vastutus oma õnne eest on 
 Tänaseks olen ma jõudnud “teisele kaldale”, kus ma ärkan iga päev naeratus näol ning mu
 elujõud on taastunud. Ka peamiselt õnne ja tänu tundmise seisundis toimub areng ja
 liikumine, kuid nüüd juba teises paradigmas.<br><br>
-Jagan lahkelt enda teelt kogutud tarkusi!<br><br>
+Jagan lahkelt enda teelt kogutud tarkusi!<br><br><button id="openTeenused">Teenused</button>
 <ul style="font-size: 1.2rem; margin: auto;">Olen:
 <li>- Rahvusvaheliselt sertifitseeritud kundalini jooga õpetaja (2018)</li>
 <li>- Kogemusnõustaja (Loov Ruum OÜ, 2021)</li>
@@ -100,6 +101,7 @@ käigus või kutsudes mind oma aeda aednikuks.</p>
     <img src="pics/Ostara.jpg" alt="imaaggeee 2" style="width: 30%; height: auto; border-radius: 8px;"/>
   </section>
 
+<div style="display: none;">
   <!-- Section 4: Text -->
   <section class="hero text-section" id="section-4">
     <h2>Teenused</h2>
@@ -118,11 +120,17 @@ käigus või kutsudes mind oma aeda aednikuks.</p>
     <p>Siin on info meie kohta.</p>
     <button id="cta-3">loe isegi veel edasi	</button>
   </section>
+  
+ </div>
 </main>
 
 <footer>
     &copy; 2025 Hingeaednik
 </footer>
   <script src="main.js"></script>
+  <script>
+  	document.getElementById("openTeenused").addEventListener("click", () => {
+      window.location.href = "services.html";
+    });</script>
 </body>
 </html>
