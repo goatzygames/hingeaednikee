@@ -6,12 +6,20 @@
   --accent: #f0e6d2;
 }
 
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body {
   margin: 0;
   padding: 0;
   background: var(--white);
   color: #383838;
-  font-family: font\Didot Regular.ttf;
+  font-family: "Forum";
+  font-weight: 550;
 }
 
 header {
