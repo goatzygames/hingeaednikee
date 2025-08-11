@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
+	  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <style>
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 2rem;
+    justify-content: center; /* centers the flex items horizontally */
+}
+        .card {
+            border: 2px solid var(--gold);
+            border-radius: 8px;
+            padding: 15px;
+            width: 220px;
+            text-align: center;
+            cursor: pointer;
+            background: var(--white);
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 0 15px rgba(0,0,0,0.15);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+        }
+		
+        .price {
+            color: green;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+		
+		  #serviceDetails {
+    border: 2px solid var(--gold, goldenrod);
+    border-radius: 8px;
+    background: var(--white, #fff);
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  }
+
+    </style>
+</head>
+<body>
+
+<header>
+  <div class="logo" style="position: relative;">
+  <img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+</div>
+
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Avaleht</a></li>
+      <li><a href="services.html">Teenused</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<section class="hero">
+    <h1>Teenused</h1>
+	<p>Jagan Sinuga lahkelt enda teelt kogutud tarkusi!</p>
+</section>
+
+<div class="card-container" id="servicesContainer"></div>
+
+<footer>
+    &copy; 2025 Hingeaednik
+</footer>
+
+<script src="main.js"></script>
+<script>
+    const container = document.getElementById("servicesContainer");
+
+    services.forEach(service => {
+        const card = document.createElement("div");
+        card.classList.add("card");
+        card.innerHTML = `
+            <img src="${service.image}" alt="${service.name}">
+            <h3>${service.name}</h3>
+            <p class="price">${service.price}</p>
+        `;
+        card.onclick = () => {
+            setSelectedService(service.id);
+            window.location.href = "service.html";
+        };
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>

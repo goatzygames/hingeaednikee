@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+<style>
+  body {
+    margin: 0;
+    font-family: 'Forum', cursive, Arial, sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+
+  .hero {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    background: #eee;
+  }
+
+  #serviceDetails {
+    background: white;
+    max-width: 500px;
+    margin: 0 auto 3rem;
+    padding: 2rem 2rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  #serviceDetails h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #serviceDetails img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+
+  .price {
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  #serviceDetails p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+
+  a.back-link {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    color: #b8860b; /* goldenrod */
+    border: 2px solid #b8860b;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  a.back-link:hover {
+    background: #b8860b;
+    color: white;
+  }
+
+  footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+  }
+</style>
+
+</head>
+<body>
+
+<header>
+  <div class="logo" style="position: relative;">
+  <img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+</div>
+
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Avaleht</a></li>
+      <li><a href="services.html">Teenused</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<section class="hero">
+    <h1>Service Details</h1>
+    <p>Learn more about this service</p>
+</section>
+
+<div id="serviceDetails"></div>
+
+<footer>
+    &copy; 2025 Hingeaednik
+</footer>
+
+<script src="main.js"></script>	
+<script>
+    const service = getSelectedService();
+
+    if (service) {
+        document.getElementById("serviceDetails").innerHTML = `
+            <h2>${service.name}</h2>
+            <img src="${service.image}" alt="${service.name}">
+            <p class="price">${service.price}</p>
+            <p>${service.description}</p>
+            <a href="services.html" class="back-link">Tagasi</a>
+			<input type="text" id="userIdInput" placeholder="Enter ID" style="display:none;"/>
+            <button id="goToContact">Võta ühendust</button>
+
+        `;
+    } else {
+        document.getElementById("serviceDetails").innerHTML = `
+            <p>Service not found. <a href="services.html" class="back-link">Go back</a></p>
+        `;
+    }
+	    document.getElementById("goToContact").addEventListener("click", () => {
+      window.location.href = "contact.html";
+    });
+</script>
+
+</body>
+</html>

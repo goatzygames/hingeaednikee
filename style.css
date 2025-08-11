@@ -346,3 +346,98 @@ header {
   color: inherit !important;
   outline: none; /* Optional: remove focus outline */
 }
+
+button {
+	font-family: "Forum";
+	font-weight: 600;
+	display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    color: #b8860b; /* goldenrod */
+    border: 2px solid #b8860b;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header {
+  position: sticky; /* or fixed */
+  top: 0;
+  width: 100%;
+  background: white; /* or your background */
+  z-index: 1000; /* keep it above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0; /* optional, removes default left padding */
+  margin-left: 0;  /* optional, removes default margin */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fade Up Anim:
+
+                           Fade-up animation for common text, headings, buttons, inputs, etc.
+h1, h2, h3, h4, h5, h6,
+p,
+button,
+input,
+textarea,
+label,
+select,
+option,
+div.section,                 if you want sections or divs with class
+nav, footer, header {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+                             Delay each element slightly for cascading effect
+h1:nth-child(1), h2:nth-child(1), p:nth-child(1),
+a:nth-child(1), button:nth-child(1), input:nth-child(1),
+textarea:nth-child(1), label:nth-child(1),
+select:nth-child(1), option:nth-child(1),
+ul:nth-child(1), ol:nth-child(1), li:nth-child(1),
+span:nth-child(1), div.section:nth-child(1),
+nav:nth-child(1), footer:nth-child(1), header:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+h1:nth-child(2), h2:nth-child(2), p:nth-child(2),
+a:nth-child(2), button:nth-child(2), input:nth-child(2),
+textarea:nth-child(2), label:nth-child(2),
+select:nth-child(2), option:nth-child(2),
+ul:nth-child(2), ol:nth-child(2), li:nth-child(2),
+span:nth-child(2), div.section:nth-child(2),
+nav:nth-child(2), footer:nth-child(2), header:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+                                 Add more nth-child rules if you want
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+*/

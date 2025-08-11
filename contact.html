@@ -5,58 +5,243 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Kontakt – Hingeaednik.ee</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Open+Sans&display=swap" rel="stylesheet" />
+  	  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <style>
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    h2, h3 {
+      color: var(--gold);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 2px solid var(--gold);
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: var(--white);
+      color: #383838;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px var(--gold);
+      transform: scale(1.01);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+
+    .map-container {
+      margin-top: 2rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.7s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
+    }
+
+    /* Animations */
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="logo">Hingeaednik.ee</h1>
-      <nav class="nav">
-        <a href="index.html" class="nav-link">Avaleht</a>
-        <a href="contact.html" class="nav-link active">Kontakt</a>
-      </nav>
-    </div>
-  </header>
 
-  <main>
-    <section class="container section contact-section">
-      <h2>Võta ühendust</h2>
-      <form id="contact-form" novalidate>
-        <label for="name">Nimi</label>
-        <input type="text" id="name" name="name" required minlength="2" placeholder="Sinu nimi" />
+<header>
+  <div class="logo" style="position: relative;">
+  <img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+</div>
 
-        <label for="email">E-post</label>
-        <input type="email" id="email" name="email" required placeholder="Sinu e-post" />
 
-        <label for="message">Sõnum</label>
-        <textarea id="message" name="message" required minlength="5" placeholder="Kirjuta oma sõnum siia..."></textarea>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Avaleht</a></li>
+      <li><a href="services.html">Teenused</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
 
-        <button type="submit">Saada</button>
-      </form>
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
 
-      <div class="map-container">
-        <h3>Meie asukoht</h3>
-        <!-- Editable map iframe placeholder -->
-        <iframe
-          id="map-iframe"
-          src="https://maps.google.com/maps?q=Tallinn&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          title="Hingeaedniku asukoht"
-        ></iframe>
-      </div>
-    </section>
-  </main>
+<section class="hero" style="animation: fadeSlideUp 0.8s ease forwards;">
+  <h1>Võta ühendust</h1>
+  <p>Küsimuste, koostöö või broneeringute jaoks täida allolev vorm.</p>
+</section>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Hingeaednik.ee | Kelli</p>
-      <p>Sotsiaalmeedia: <span class="social-placeholder">[siia sotsiaalmeedia ikoonid]</span></p>
-    </div>
-  </footer>
+<main>
+<form id="contact-form" action="https://formspree.io/f/xyzplqby" method="POST" novalidate>
 
-  <script src="main.js"></script>
+<label for="service-select">Vali teenus</label>
+<input type="text" id="service-select" name="service-select" placeholder="Kirjuta teenuse nimi siia" />
+
+<!-- Hidden input to sync selected service info (optional now, can remove if unused) -->
+<input type="hidden" id="service-info" name="service-info" value="">
+  <label for="name">Nimi</label>
+  <input type="text" id="name" name="name" required minlength="2" placeholder="Sinu nimi" />
+
+  <label for="email">E-post</label>
+  <input type="email" id="email" name="email" required placeholder="Sinu e-post" />
+
+  <label for="message">Sõnum</label>
+  <textarea id="message" name="message" required minlength="5" placeholder="Kirjuta oma sõnum siia..."></textarea>
+
+  <button type="submit">Saada</button>
+</form>
+
+
+<!-- Optional visible display -->
+<div id="idDisplay" style="margin-top: 1rem; font-weight: bold;"></div>
+
+	
+
+  <div class="map-container" style="display: none;">
+    <h3>Meie asukoht</h3>
+    <iframe
+      id="map-iframe"
+      src="https://maps.google.com/maps?q=Tallinn&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Hingeaedniku asukoht"
+    ></iframe>
+  </div>
+</main>
+
+<footer>
+    &copy; 2025 Hingeaednik
+</footer>
+
+
+<script src="main.js"></script>
+
+<script>
+
+function getParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Function to get URL parameter by name
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+const id = getQueryParam('id');
+if (id) {
+  // Use the ID for something here, e.g., display it
+  console.log('Received ID:', id);
+  // Example: display it in some element
+  const idDisplay = document.getElementById('idDisplay');
+  if (idDisplay) {
+    idDisplay.textContent = `ID received: ${id}`;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const serviceId = getParam('id');  // e.g. contact.html?id=service1
+
+  if (serviceId) {
+    // Find service by id
+    const service = services.find(s => s.id === serviceId);
+
+    if (service) {
+      // Put some info in visible display
+      document.getElementById('idDisplay').textContent = 
+        `You are contacting about: ${service.name} (${service.price})`;
+
+      // Set hidden input value (can be just the id or a summary)
+      document.getElementById('service-info').value = 
+        `Service: ${service.name} | Price: ${service.price} | Description: ${service.description}`;
+    }
+  }
+  
+  window.addEventListener('DOMContentLoaded', () => {
+  const select = document.getElementById('service-select');
+  const hiddenInput = document.getElementById('service-info');
+
+  if (!select || !window.services) {
+    console.error('Select element or services array not found.');
+    return;
+  }
+
+  // Clear existing options except placeholder
+  select.innerHTML = '<option value="" disabled selected>Vali teenus</option>';
+
+  window.services.forEach(service => {
+    const option = document.createElement('option');
+    option.value = service.name;       // or service.id if you want
+    option.textContent = service.name;
+    select.appendChild(option);
+  });
+
+  // Update hidden input when user selects a service
+  select.addEventListener('change', () => {
+    hiddenInput.value = select.value;
+  });
+});
+
+const textInput = document.getElementById('service-select');
+const hiddenInput = document.getElementById('service-info');
+
+if (textInput && hiddenInput) {
+  textInput.addEventListener('input', () => {
+    hiddenInput.value = textInput.value;
+  });
+}
+
+</script>
 </body>
 </html>
