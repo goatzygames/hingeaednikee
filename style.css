@@ -355,7 +355,7 @@ button {
     padding: 0.6rem 1.2rem;
     font-weight: 600;
     color: #b8860b; /* goldenrod */
-    border: 2px solid #b8860b;
+/*    border: 2px solid #b8860b; */
     border-radius: 8px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -376,6 +376,13 @@ ul {
   margin-left: 0;  /* optional, removes default margin */
 }
 
+img:not(.logo) {
+  border: 3px double var(--gold); /* double-line gold border */
+  border-radius: 10px;            /* smooth corners */
+  padding: 4px;                   /* space between border and image */
+  background: var(--white);       /* makes the border stand out */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12); /* subtle depth */
+}
 
 
 

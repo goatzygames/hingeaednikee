@@ -2,6 +2,7 @@ body {
     font-family: "Forum";
     margin: 20px;
 	margin: 0;
+	line-spacing: 1.6;
 }
 
 .card-grid {
@@ -22,12 +23,13 @@ body {
 }
 
 .card img {
-    width: 100%;
+    width: 150px; /* or whatever fixed width you want */
     height: 150px;
     object-fit: cover;
     border-radius: 5px;
+    display: block;       /* ensures margin auto works */
+    margin: 0 auto;       /* centers horizontally */
 }
-
 .card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
@@ -60,4 +62,13 @@ button {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.card img {
+    width: 150px;           /* fixed width */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;         /* makes margin auto work */
+    margin: 0 auto;         /* horizontal centering */
 }
