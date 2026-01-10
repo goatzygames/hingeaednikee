@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+<!-- Marketing stuff -->
+
+  <meta name="description" content="Hingega luues. Südamest tegutsedes." />
+  <meta name="keywords" content="aednik, aiandus, eneseareng, mentor, looduskodu, kestlikkus, taimede hooldus, südamest, käsitöö, loodusearmastus" />
+  <meta name="author" content="Hingeaednik" />
+  
+  <!-- Favicon -->
+<link rel="icon" href="pics/Logo_ümmargune_tekstita-Photoroom.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="pics/Logo_ümmargune_tekstita-Photoroom.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jooga|Mentor|Aednik" />
+  <meta property="og:description" content="Hingega luues. Südamest tegutsedes." />
+  <meta property="og:image" content="https://i.ibb.co/5mvFQ80/Logo-mmargune-tekstita-Photoroom.png" />
+  <meta property="og:url" content="https://hingeaednik.ee" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Hingeaednik" />
+  <meta name="twitter:description" content="Hingega luues. Südamest tegutsedes." />
+  <meta name="twitter:image" content="pics/Logo_ümmargune_tekstita-Photoroom.png" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – Hingeaednik.ee</title>
+  <link rel="stylesheet" href="style.css" />
+  	  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <style>
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.3s;
+    }
+
+    h2, h3 {
+      color: var(--gold);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.5s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      border: 2px solid var(--gold);
+      border-radius: 5px;
+      font-family: inherit;
+      font-size: 1rem;
+      background: var(--white);
+      color: #383838;
+      transition: all 0.3s ease;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 8px var(--gold);
+      transform: scale(1.01);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+
+    .map-container {
+      margin-top: 2rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.7s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    iframe:hover {
+      transform: scale(1.02);
+    }
+
+    /* Animations */
+    @keyframes fadeSlideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+	
+	    .extra-contacts {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      font-size: 1.1rem;
+      animation: fadeSlideUp 0.8s ease forwards;
+      animation-delay: 0.6s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .extra-contacts a {
+      color: inherit;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s ease;
+    }
+
+    .extra-contacts a:hover {
+      color: var(--gold);
+    }
+
+    .extra-contacts i {
+      color: var(--gold);
+      min-width: 20px;
+      text-align: center;
+    }
+	
+	  .icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  .icon-button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    position: relative;
+  }
+  .icon-button svg {
+    width: 100%;
+    height: 100%;
+    fill: #555;
+    transition: fill 0.3s;
+  }
+  .icon-button:hover svg {
+    fill: #d4af37;
+  }
+  /* Popup style */
+  .popup {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s;
+    user-select: none;
+    z-index: 10;
+  }
+  .popup.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  h1 {
+  text-align: center;
+}
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo" style="position: relative;">
+  <a href="index.html"><img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo"></a>
+</div>
+
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Avaleht</a></li>
+      <li><a href="services.html">Teenused</a></li>
+      <li><a href="contact.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <button class="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<section class="hero" style="animation: fadeSlideUp 0.8s ease forwards;">
+  <h1>Võta ühendust</h1>
+  <p>Registreeru joogatundi, broneeri konsultatsioon või kutsu mind oma aeda!</p>
+</section>
+
+<main>
+<form id="contact-form" action="https://formspree.io/f/xyzplqby" method="POST" novalidate>
+
+<label for="service-select">Vali teenus</label>
+<input type="text" id="service-select" name="service-select" placeholder="Kirjuta teenuse nimi siia" />
+
+<!-- Hidden input to sync selected service info (optional now, can remove if unused) -->
+<input type="hidden" id="service-info" name="service-info" value="">
+  <label for="name">Nimi</label>
+  <input type="text" id="name" name="name" required minlength="2" placeholder="Sinu nimi" />
+
+  <label for="email">E-post</label>
+  <input type="email" id="email" name="email" required placeholder="Sinu e-post" />
+
+  <label for="message">Sõnum</label>
+  <textarea id="message" name="message" required minlength="5" placeholder="Kirjuta oma sõnum siia..."></textarea>
+
+  <button type="submit">Saada</button>
+</form>
+
+
+<h1>Südamlik OÜ</h1>
+
+<div class="icons">
+  <!-- Email -->
+  <div class="icon-button" data-info="kelli@hingeaednik.ee">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm16 2.4l-8 7.2-8-7.2V20h16V6.4z"/>
+    </svg>
+  </div>
+
+  <!-- Phone -->
+  <div class="icon-button" data-info="+372 506 8519">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21 11.36 11.36 0 003.58.57 1 1 0 011 1v3.5a1 1 0 01-1 1A17.91 17.91 0 013 6a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.58 1 1 0 01-.21 1.11l-2.24 2.1z"/>
+    </svg>
+  </div>
+
+  <!-- Facebook -->
+  <div class="icon-button" data-info="https://www.facebook.com/InimeseksOlemine">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2v-3h2v-2c0-2 1-3 3-3h2v3h-2c-.2 0-.5.2-.5.5V12h2.5l-.5 3h-2v7A10 10 0 0022 12z"/>
+    </svg>
+  </div>
+</div>
+
+<script>
+const icons = document.querySelectorAll('.icon-button');
+
+icons.forEach(icon => {
+  const popup = document.createElement('div');
+  popup.className = 'popup';
+  popup.textContent = icon.dataset.info;
+  icon.appendChild(popup);
+
+  icon.addEventListener('click', () => {
+    const isShowing = popup.classList.contains('show');
+
+    // Hide other popups
+    document.querySelectorAll('.popup.show').forEach(p => {
+      if (p !== popup) p.classList.remove('show');
+    });
+
+    if (isShowing) {
+      // If Facebook icon, redirect to Facebook URL on second click
+      if (icon.dataset.info.startsWith('http')) {
+        window.open(icon.dataset.info, '_blank'); // open in new tab
+      }
+      // Also close the popup
+      popup.classList.remove('show');
+    } else {
+      // Show popup on first click
+      popup.classList.add('show');
+    }
+  });
+});
+
+// Close popups when clicking outside
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.icon-button')) {
+    document.querySelectorAll('.popup.show').forEach(p => p.classList.remove('show'));
+  }
+});
+
+</script>
+
+	
+
+  <div class="map-container" style="display: none;">
+    <h3>Meie asukoht</h3>
+    <iframe
+      id="map-iframe"
+      src="https://maps.google.com/maps?q=Tallinn&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Hingeaedniku asukoht"
+    ></iframe>
+  </div>
+</main>
+
+<footer>
+    &copy; 2025 Hingeaednik
+</footer>
+
+
+<script src="main.js"></script>
+
+<script>
+
+function getParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+// Function to get URL parameter by name
+function getQueryParam(name) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(name);
+}
+
+const id = getQueryParam('id');
+if (id) {
+  // Use the ID for something here, e.g., display it
+  console.log('Received ID:', id);
+  // Example: display it in some element
+  const idDisplay = document.getElementById('idDisplay');
+  if (idDisplay) {
+    idDisplay.textContent = `ID received: ${id}`;
+  }
+}
+
+window.addEventListener('DOMContentLoaded', () => {
+  const serviceId = getParam('id');  // e.g. contact.html?id=service1
+
+  if (serviceId) {
+    // Find service by id
+    const service = services.find(s => s.id === serviceId);
+
+    if (service) {
+      // Put some info in visible display
+      document.getElementById('idDisplay').textContent = 
+        `You are contacting about: ${service.name} (${service.price})`;
+
+      // Set hidden input value (can be just the id or a summary)
+      document.getElementById('service-info').value = 
+        `Service: ${service.name} | Price: ${service.price} | Description: ${service.description}`;
+    }
+  }
+  
+  window.addEventListener('DOMContentLoaded', () => {
+  const select = document.getElementById('service-select');
+  const hiddenInput = document.getElementById('service-info');
+
+  if (!select || !window.services) {
+    console.error('Select element or services array not found.');
+    return;
+  }
+
+  // Clear existing options except placeholder
+  select.innerHTML = '<option value="" disabled selected>Vali teenus</option>';
+
+  window.services.forEach(service => {
+    const option = document.createElement('option');
+    option.value = service.name;       // or service.id if you want
+    option.textContent = service.name;
+    select.appendChild(option);
+  });
+
+  // Update hidden input when user selects a service
+  select.addEventListener('change', () => {
+    hiddenInput.value = select.value;
+  });
+});
+
+const textInput = document.getElementById('service-select');
+const hiddenInput = document.getElementById('service-info');
+
+if (textInput && hiddenInput) {
+  textInput.addEventListener('input', () => {
+    hiddenInput.value = textInput.value;
+  });
+}
+
+</script>
+</body>
+</html>

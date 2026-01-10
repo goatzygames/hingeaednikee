@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projekt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <a href="index.html" class="back-link">← Tagasi Hingeaednik.ee</a>
+  </header>
+
+  <main id="projectContent">
+    <!-- Project info will be loaded here -->
+  </main>
+
+  <script src="main.js" defer></script>
+  <script>
+    // Wait for main.js to load projects array
+    window.addEventListener('DOMContentLoaded', () => {
+      // Get id from URL
+      const params = new URLSearchParams(window.location.search);
+      const id = params.get('id');
+
+      const content = document.getElementById('projectContent');
+
+      if (!id || isNaN(id) || !projects[id]) {
+        content.innerHTML = '<p>Projekt ei leitud.</p>';
+        return;
+      }
+
+      const project = projects[id];
+      
+      // Render project info dynamically
+      content.innerHTML = `
+        <h1>${project.title}</h1>
+        <p>${project.description}</p>
+        <div class="project-images">
+          ${project.images.map(img => `<img src="${img}" alt="${project.title} pilt" />`).join('')}
+        </div>
+        <a href="${project.url}" target="_blank" rel="noopener noreferrer">Vaata lisainfot</a>
+      `;
+    });
+  </script>
+</body>
+</html>

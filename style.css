@@ -1,0 +1,451 @@
+/* style.css */
+
+:root {
+  --gold: #d4af37;
+  --white: #ffffff;
+  --accent: #f0e6d2;
+}
+
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  color: #383838;
+  font-family: "Forum";
+  font-weight: 550;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 1.5rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  position: relative;
+  color: #383838;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  left: 0;
+  bottom: -2px;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: var(--white);
+  color: var(--gold);
+  border: 2px solid var(--gold);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+button:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  border-top: 2px solid var(--gold);
+  font-size: 0.9rem;
+}
+
+/* Add border to all sections with class hero */
+section.hero {
+  padding: 16px;          /* some spacing inside */
+  margin-bottom: 1px;    /* space between sections */
+  box-sizing: border-box; /* include padding & border in size */
+  border-radius: 6px;     /* optional: rounded corners */
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav a {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Make header bigger on desktop */
+header {
+  padding: 4rem 3rem; /* bigger padding */
+  font-size: 1.75rem; /* bigger font */
+}
+
+/* Hamburger button (hidden on desktop) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+  position: relative;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  header {
+    padding: 2rem 1.5rem;
+    font-size: 1.3rem;
+    position: relative;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--accent);
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  nav.open {
+    max-height: 500px; /* enough to show all links */
+  }
+
+  nav ul.nav-links {
+    flex-direction: column;
+    padding: 1rem 2rem;
+    gap: 1rem;
+  }
+
+  nav ul.nav-links li {
+    width: 100%;
+  }
+
+  nav ul.nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1.2rem;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+    position: absolute;
+    top: 2.5rem;
+    right: 1.5rem;
+    z-index: 1001;
+  }
+
+  /* Animate hamburger into X when open */
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 8px;
+    position: relative;
+  }
+
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: -8px;
+    position: relative;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2rem;
+  border-bottom: 2px solid var(--gold);
+  font-size: 1.5rem;
+
+  /* Add this */
+  height: 8rem;          /* Fix header height */
+  box-sizing: border-box;
+}
+
+.logo img {
+
+
+  display: block;
+    align-self: flex-start;
+}
+
+.logo {
+  display: flex;           /* make the div a flex container */
+  align-items: flex-start; /* align children to top */
+  margin: 0;
+  padding: 0;
+}
+
+.logo img {
+  display: block;          /* remove inline spacing issues */
+  margin: 0;
+  padding: 0;
+  align-self: flex-start;  /* ensure image aligns to top */
+  max-height: 70px;        /* or your desired max height */
+  width: auto;  /* Set a fixed width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+.logo img {
+  position: relative;
+  top: 20px; /* moves image down 20px from its normal spot */
+  top: -0.8rem
+}
+
+@media (max-width: 768px) {
+  .logo {
+    position: relative;
+    left: -10rem;
+  }
+
+  .logo img {
+    position: absolute;
+    top: -2rem;
+    max-height: 70px;
+  }
+}
+
+.hamburger {
+  background: transparent !important;
+  border: none !important;
+  color: inherit !important;
+}
+
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  background: transparent !important;
+  color: inherit !important;
+  outline: none; /* Optional: remove focus outline */
+}
+
+button {
+	font-family: "Forum";
+	font-weight: 600;
+	display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-weight: 600;
+    color: #b8860b; /* goldenrod */
+/*    border: 2px solid #b8860b; */
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+header {
+  position: sticky; /* or fixed */
+  top: 0;
+  width: 100%;
+  background: white; /* or your background */
+  z-index: 1000; /* keep it above other content */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* optional */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0; /* optional, removes default left padding */
+  margin-left: 0;  /* optional, removes default margin */
+}
+
+#img_class {
+  border: 3px double var(--gold); /* double-line gold border */
+  border-radius: 10px;            /* smooth corners */
+  padding: 4px;                   /* space between border and image */
+  background: var(--white);       /* makes the border stand out */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12); /* subtle depth */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Fade Up Anim:
+
+                           Fade-up animation for common text, headings, buttons, inputs, etc.
+h1, h2, h3, h4, h5, h6,
+p,
+button,
+input,
+textarea,
+label,
+select,
+option,
+div.section,                 if you want sections or divs with class
+nav, footer, header {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+                             Delay each element slightly for cascading effect
+h1:nth-child(1), h2:nth-child(1), p:nth-child(1),
+a:nth-child(1), button:nth-child(1), input:nth-child(1),
+textarea:nth-child(1), label:nth-child(1),
+select:nth-child(1), option:nth-child(1),
+ul:nth-child(1), ol:nth-child(1), li:nth-child(1),
+span:nth-child(1), div.section:nth-child(1),
+nav:nth-child(1), footer:nth-child(1), header:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+h1:nth-child(2), h2:nth-child(2), p:nth-child(2),
+a:nth-child(2), button:nth-child(2), input:nth-child(2),
+textarea:nth-child(2), label:nth-child(2),
+select:nth-child(2), option:nth-child(2),
+ul:nth-child(2), ol:nth-child(2), li:nth-child(2),
+span:nth-child(2), div.section:nth-child(2),
+nav:nth-child(2), footer:nth-child(2), header:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+                                 Add more nth-child rules if you want
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+*/
