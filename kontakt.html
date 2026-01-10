@@ -197,26 +197,9 @@
 </head>
 <body>
 
-<header>
-  <div class="logo" style="position: relative;">
-  <a href="index.html"><img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo"></a>
-</div>
+<div class="main-header-insert"></div>
 
-
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Avaleht</a></li>
-      <li><a href="services.html">Teenused</a></li>
-      <li><a href="contact.html">Kontakt</a></li>
-    </ul>
-  </nav>
-
-  <button class="hamburger" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</header>
+<div class="content-spacer"></div>
 
 <section class="hero" style="animation: fadeSlideUp 0.8s ease forwards;">
   <h1>Võta ühendust</h1>
@@ -332,81 +315,53 @@ document.addEventListener('click', (e) => {
 <script src="main.js"></script>
 
 <script>
-
-function getParam(name) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
-}
-
-// Function to get URL parameter by name
+/**
+ * REFINED CONTACT LOGIC
+ */
 function getQueryParam(name) {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get(name);
 }
 
-const id = getQueryParam('id');
-if (id) {
-  // Use the ID for something here, e.g., display it
-  console.log('Received ID:', id);
-  // Example: display it in some element
-  const idDisplay = document.getElementById('idDisplay');
-  if (idDisplay) {
-    idDisplay.textContent = `ID received: ${id}`;
-  }
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-  const serviceId = getParam('id');  // e.g. contact.html?id=service1
-
-  if (serviceId) {
-    // Find service by id
-    const service = services.find(s => s.id === serviceId);
-
-    if (service) {
-      // Put some info in visible display
-      document.getElementById('idDisplay').textContent = 
-        `You are contacting about: ${service.name} (${service.price})`;
-
-      // Set hidden input value (can be just the id or a summary)
-      document.getElementById('service-info').value = 
-        `Service: ${service.name} | Price: ${service.price} | Description: ${service.description}`;
+function initContactForm() {
+  const serviceId = getQueryParam('id');
+  const serviceInput = document.getElementById('service-select');
+  const hiddenInfo = document.getElementById('service-info');
+  
+  // 1. Handle incoming Service ID from URL (e.g., ?id=jooga)
+  if (serviceId && window.services) {
+    // Find the service object in your main.js array
+    const selectedService = window.services.find(s => s.id === serviceId);
+    
+    if (selectedService) {
+      // Auto-fill the visible input
+      serviceInput.value = selectedService.name;
+      
+      // Auto-fill the hidden info for Formspree
+      hiddenInfo.value = `Valitud teenus: ${selectedService.name} | Hind: ${selectedService.price}`;
+      
+      console.log("Form auto-filled for:", selectedService.name);
     }
   }
-  
-  window.addEventListener('DOMContentLoaded', () => {
-  const select = document.getElementById('service-select');
-  const hiddenInput = document.getElementById('service-info');
 
-  if (!select || !window.services) {
-    console.error('Select element or services array not found.');
-    return;
-  }
-
-  // Clear existing options except placeholder
-  select.innerHTML = '<option value="" disabled selected>Vali teenus</option>';
-
-  window.services.forEach(service => {
-    const option = document.createElement('option');
-    option.value = service.name;       // or service.id if you want
-    option.textContent = service.name;
-    select.appendChild(option);
+  // 2. Sync manual typing (User writes their own service name)
+  serviceInput.addEventListener('input', (e) => {
+    hiddenInfo.value = `Kasutaja sisestatud: ${e.target.value}`;
   });
 
-  // Update hidden input when user selects a service
-  select.addEventListener('change', () => {
-    hiddenInput.value = select.value;
-  });
-});
-
-const textInput = document.getElementById('service-select');
-const hiddenInput = document.getElementById('service-info');
-
-if (textInput && hiddenInput) {
-  textInput.addEventListener('input', () => {
-    hiddenInput.value = textInput.value;
+  // 3. Optional: Form Validation Feedback
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', (e) => {
+    const btn = form.querySelector('button[type="submit"]');
+    btn.innerText = "Saadan...";
+    btn.style.opacity = "0.7";
+    // Formspree will handle the actual redirect/submission
   });
 }
 
+// Initialize when DOM is ready
+window.addEventListener('DOMContentLoaded', initContactForm);
 </script>
+
 </body>
 </html>

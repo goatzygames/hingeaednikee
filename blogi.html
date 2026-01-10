@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Hingega luues. Südamest tegutsedes." />
+  <meta name="keywords" content="aednik, aiandus, eneseareng, mentor, looduskodu, kestlikkus, taimede hooldus, südamest, käsitöö, loodusearmastus" />
+  <meta name="author" content="Hingeaednik" />
+  
+  <link rel="icon" href="pics/Logo_ümmargune_tekstita-Photoroom.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="pics/Logo_ümmargune_tekstita-Photoroom.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Blogi | Hingeaednik" />
+  <meta property="og:description" content="Hingega luues. Südamest tegutsedes." />
+  <meta property="og:image" content="https://i.ibb.co/5mvFQ80/Logo-mmargune-tekstita-Photoroom.png" />
+  <meta property="og:url" content="https://hingeaednik.ee/blogi.html" />
+  
+  <title>Blogi – Hingeaednik.ee</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+
+  <style>
+    /* Unique Blog Layout Overrides */
+    .blog-wrapper {
+      max-width: 1200px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+    }
+
+    .blog-post-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 10rem;
+      position: relative;
+    }
+
+    /* Asymmetrical Image container */
+    .blog-img-box {
+      flex: 0 0 55%;
+      position: relative;
+      z-index: 1;
+    }
+
+    .blog-img-box img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+      /* Using your existing img_class style via the ID */
+    }
+
+    /* Floating content box */
+    .blog-text-box {
+      flex: 0 0 45%;
+      background: var(--white);
+      padding: 3.5rem;
+      border: 2px solid var(--gold);
+      margin-left: -10%; /* Creates the overlap */
+      z-index: 2;
+      box-shadow: 12px 12px 0px var(--accent);
+      transition: transform 0.3s ease;
+    }
+
+    /* Reverse order for every second post */
+    .blog-post-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .blog-post-row:nth-child(even) .blog-text-box {
+      margin-left: 0;
+      margin-right: -10%;
+    }
+
+    .blog-text-box h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #383838;
+    }
+
+    .date-tag {
+      color: var(--gold);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .blog-excerpt {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .blog-btn {
+      text-decoration: none;
+      /* Inherits your button styles from style.css */
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 992px) {
+      .blog-post-row, .blog-post-row:nth-child(even) {
+        flex-direction: column;
+        margin-bottom: 6rem;
+      }
+      .blog-img-box, .blog-text-box {
+        flex: 0 0 100%;
+        width: 100%;
+      }
+      .blog-text-box {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: -3rem;
+        width: 90%;
+        padding: 2rem;
+      }
+      .blog-img-box img {
+        height: 350px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-header-insert"></div>
+
+<div class="content-spacer"></div>
+
+<main>
+  <section class="hero text-section">
+    <h1>Blogi & Mõtisklused</h1>
+    <p>Minu blogi enda mõtisklutest ja elurännetest</p>
+  </section>
+
+  <div class="blog-wrapper">
+
+    <article class="blog-post-row">
+      <div class="blog-img-box">
+        <img src="pics/Ostara.jpg" alt="Blogipilt" id="img_class">
+      </div>
+      <div class="blog-text-box">
+        <span class="date-tag">10. JAANUAR 2026</span>
+        <h2>Aed kui peegel</h2>
+        <p class="blog-excerpt">Kuidas umbrohi meie sees ja ümber peegeldab meie hetkeseisundit ning kuidas teadlik rohimine võib olla teraapiline.</p>
+        <a href="post1.html" class="blog-btn"><button>Loe edasi</button></a>
+      </div>
+    </article>
+
+    <article class="blog-post-row">
+      <div class="blog-img-box">
+        <img src="pics/Kelli 2025.jpg" alt="Blogipilt" id="img_class">
+      </div>
+      <div class="blog-text-box">
+        <span class="date-tag">10. JAANUAR 2026</span>
+        <h2>Kundalini vägi</h2>
+        <p class="blog-excerpt">Minu teekond joogani ja kuidas see muutis minu vaadet inimeseks olemisele ja elujõule.</p>
+        <a href="post2.html" class="blog-btn"><button>Loe edasi</button></a>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+    &copy; 2025 Hingeaednik <br><i></i>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  // Mobile menu logic (same as your other pages)
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

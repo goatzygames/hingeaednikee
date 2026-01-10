@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teenused – Hingeaednik.ee</title>
+  
+  <meta name="description" content="Hingega luues. Südamest tegutsedes." />
+  <link rel="icon" href="pics/Logo_ümmargune_tekstita-Photoroom.ico" type="image/x-icon" />
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+
+  <style>
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 4rem 2rem;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: var(--white);
+      border: 2px solid var(--gold);
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+      text-decoration: none; /* Removes underline from links */
+      color: inherit;
+      transition: all 0.3s ease;
+      position: relative;
+      /* Using the offset shadow style from your blog */
+      box-shadow: 8px 8px 0px var(--accent);
+    }
+
+    .card:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 12px 12px 0px var(--gold);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      border: 1px solid var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+      color: #383838;
+    }
+
+    .price {
+      color: var(--gold); /* Changed from green to match your theme */
+      font-weight: bold;
+      font-size: 1.3rem;
+      margin-top: 10px;
+      display: block;
+    }
+
+    .view-btn {
+      margin-top: 15px;
+      display: inline-block;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+<div class="main-header-insert"></div>
+
+<div class="content-spacer"></div>
+
+<section class="hero">
+  <h1>Teenused</h1>
+  <p>Vali endale sobiv viis koosloomiseks ja kasvamiseks.</p>
+</section>
+
+<div class="card-container">
+  
+  <a href="kontakt.html?id=jooga" class="card">
+    <img src="pics/Kelli 2025.jpg" alt="Kundalini Jooga">
+    <h3>Joogatunnid</h3>
+    <p>Grupi- ja eratunnid keha ja meele tasakaalustamiseks.</p>
+    <span class="price">al. 15€</span>
+    <span class="view-btn">Küsi lisa</span>
+  </a>
+
+  <a href="kontakt.html?id=mentorlus" class="card">
+    <img src="pics/Ostara.jpg" alt="Mentorkohtumine">
+    <h3>Mentorkohtumised</h3>
+    <p>Toetav kuulamine ja juhendamine Sinu enesearengu teel.</p>
+    <span class="price">50€ / h</span>
+    <span class="view-btn">Broneeri aeg</span>
+  </a>
+
+  <a href="kontakt.html?id=aiandus" class="card">
+    <img src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=400" alt="Aiandus">
+    <h3>Aiahooldus</h3>
+    <p>Professionaalne nõu ja käed-külge abi Sinu unistuste aias.</p>
+    <span class="price">Kokkuleppel</span>
+    <span class="view-btn">Kutsu aeda</span>
+  </a>
+
+</div>
+
+<footer>
+    &copy; 2025 Hingeaednik
+</footer>
+
+<script src="main.js"></script>
+<script>
+  // Mobile menu logic
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    nav.classList.toggle('open');
+  });
+</script>
+
+</body>
+</html>

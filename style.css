@@ -289,6 +289,11 @@ header {
   /* Add this */
   height: 8rem;          /* Fix header height */
   box-sizing: border-box;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  
 }
 
 .logo img {
@@ -376,13 +381,15 @@ ul {
   margin-left: 0;  /* optional, removes default margin */
 }
 
-#img_class {
+#img_class img {
   border: 3px double var(--gold); /* double-line gold border */
   border-radius: 10px;            /* smooth corners */
   padding: 4px;                   /* space between border and image */
   background: var(--white);       /* makes the border stand out */
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12); /* subtle depth */
 }
+
+    .content-spacer { padding-top: 8rem; }
 
 
 
