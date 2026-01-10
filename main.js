@@ -2,7 +2,7 @@
  * main.js - Centralized Logic for Hingeaednik.ee
  */
 
-// 1. DATA: Define services first so they are available to all functions
+// 1. DATA: Define services first
 window.services = [
     {
         id: "jooga",
@@ -27,7 +27,7 @@ window.services = [
     }
 ];
 
-// 2. HELPER FUNCTIONS: For LocalStorage (Optional but kept from your draft)
+// 2. HELPER FUNCTIONS
 function setSelectedService(id) {
     localStorage.setItem("selectedService", id);
 }
@@ -37,13 +37,13 @@ function getSelectedService() {
     return window.services.find(s => s.id === id);
 }
 
-// 3. HEADER INJECTION: Injects the HTML and sets up the mobile menu
+// 3. HEADER INJECTION
 function injectHeader() {
     const headerContainer = document.querySelector('.main-header-insert');
     if (!headerContainer) return;
 
     headerContainer.innerHTML = `
-    <header style="position: fixed;">
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
       <div class="logo" style="position: relative;">
         <a href="/">
           <img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
@@ -63,7 +63,6 @@ function injectHeader() {
     </header>
     `;
 
-    // Mobile Menu Logic (Hamburger)
     const hb = headerContainer.querySelector('.hamburger');
     const nv = headerContainer.querySelector('nav');
     
@@ -76,30 +75,40 @@ function injectHeader() {
     }
 }
 
-// 4. INITIALIZATION: Run when the page is ready
+// 4. INITIALIZATION
 document.addEventListener('DOMContentLoaded', () => {
-    // Inject the header onto the page
+    // 1. Always try to inject header
     injectHeader();
 
-    // Handle "cta" button if it exists on the page
+    // 2. Safely handle "cta" button
     const ctaBtn = document.getElementById('cta');
-    if (ctaBtn) {
+    if (ctaBtn !== null) {
         ctaBtn.addEventListener('click', () => {
             alert('Aitäh huvi eest! Suuname sind peagi edasi.');
         });
     }
 
-    // Handle "goToContact" if it exists on the page
+    // 3. Safely handle "goToContact" logic
     const contactBtn = document.getElementById('goToContact');
-    if (contactBtn) {
+    if (contactBtn !== null) {
         contactBtn.addEventListener('click', () => {
             const idInput = document.getElementById('userIdInput');
-            const idValue = idInput ? idInput.value.trim() : "";
-            if (idValue) {
-                window.location.href = `contact.html?id=${encodeURIComponent(idValue)}`;
-            } else {
-                alert('Palun sisesta ID');
+            if (idInput) {
+                const idValue = idInput.value.trim();
+                if (idValue) {
+                    window.location.href = `kontakt.html?id=${encodeURIComponent(idValue)}`;
+                } else {
+                    alert('Palun sisesta ID');
+                }
             }
         });
     }
+
+    // 4. Safely handle "openTeenused" buttons from your HTML
+    const teenusedBtns = document.querySelectorAll('#openTeenused, .openTeenused');
+    teenusedBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            window.location.href = "teenused.html";
+        });
+    });
 });
