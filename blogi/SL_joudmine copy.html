@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
-  
 
   <style>
     :root {
@@ -162,61 +161,6 @@
     a, h1, h2, h3, h4, h5, h6, p {
       font-weight: 400;
     }
-
-    header.site-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--bg-soft);
-    height: 60px; /* adjust as needed */
-    }
-
-    header.blog-header {
-        position: relative; /* better than fixed for scrolling */
-        z-index: 900;
-        background-color: var(--bg-soft);
-        padding: 1rem 0;
-    }
-
-    /* Fix for the Main Site Header spacing */
-    .content-spacer {
-      height: 80px; /* Adjust this to match the height of your main site header */
-    }
-
-    /* Refined Blog Header - No longer fixed, making it part of the page flow */
-    .blog-header {
-      text-align: center;
-      padding: 2rem 0 3rem 0; /* Adds elegant breathing room */
-      background-color: transparent;
-      width: 100%;
-    }
-
-    .blog-header h1 {
-      font-family: 'Forum', serif;
-      font-size: 3rem;
-      margin: 0.5rem 0;
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--text-dark);
-    }
-
-    /* Optional: Add a subtle divider between header and image */
-    .blog-header::after {
-      content: "";
-      display: block;
-      width: 50px;
-      height: 1px;
-      background: var(--gold);
-      margin: 1.5rem auto 0;
-    }
-
-    @media (max-width: 600px) {
-      .content-spacer { height: 70px; }
-      .blog-header h1 { font-size: 2.2rem; }
-      .blog-header { padding: 1rem 0 2rem 0; }
-    }
-
   </style>
 </head>
 <body>
@@ -240,15 +184,15 @@
       </button>
     </header>
 
-    <div class="content-spacer"></div>
+  <main class="blog-container">
+    
+    <header class="blog-header" style="position: fixed; box-shadow: none;">
+      <span class="blog-meta">12. jaanuar 2026</span>
+      <h1>Minu Sri Lanka 2026</h1>
+    </header>
 
-    <main class="blog-container">
-      <header class="blog-header" style="box-shadow: none;">
-        <span class="blog-meta">12. jaanuar 2026</span>
-        <h1>Minu Sri Lanka 2026</h1>
-      </header>
+    <img src="../pics/blogi1_SL.jpg" alt="Sri Lanka reis" class="blog-featured-image">
 
-      <img src="../pics/blogi1_SL.jpg" alt="Sri Lanka reis" class="blog-featured-image">
     <article class="blog-content">
       <p>
         Siin on lugu minu järjekordse unistuse täitumisest - veeta kodumaisest külmast perioodist osa soojas. Elu premeerib julgust ja südame järgi tehtud valikuid väga armulikult.
@@ -301,7 +245,7 @@
     </article>
 
     <div style="text-align: center;">
-      <a href="../blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
+      <a href="blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
     </div>
 
   </main>
