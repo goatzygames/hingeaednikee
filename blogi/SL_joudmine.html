@@ -10,10 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Forum&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
   
-
   <style>
     :root {
-      --gold: #b3925d; /* Mahe kuldne toon */
+      --gold: #b3925d;
       --text-dark: #2c2c2c;
       --text-light: #666;
       --bg-soft: #fcfbf7;
@@ -23,30 +22,27 @@
       margin: 0;
       padding: 0;
       background-color: var(--bg-soft);
-      font-family: 'Forum', serif; /* Loetavam ja elegantsem põhitekst */
+      font-family: 'Forum', serif;
       color: var(--text-dark);
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Peamine konteiner */
     .blog-container {
       max-width: 750px;
       margin: 0 auto;
       padding: 2rem 1.2rem;
     }
 
-    /* Pealkirja sektsioon - parandatud mobiilile */
     .blog-header {
       text-align: center;
-      /* padding: 3rem 0; */
     }
 
     .blog-header h1 {
       font-family: 'Forum', serif;
-      font-size: 2.8rem;
+      font-size: 3rem;
       margin: 0.5rem 0;
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.1;
       color: var(--text-dark);
     }
 
@@ -60,21 +56,19 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Kaanepilt */
     .blog-featured-image {
       width: 100%;
       height: auto;
-      border-radius: 4px; /* Pehmem nurk */
+      border-radius: 4px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.08);
       margin-bottom: 3rem;
       display: block;
     }
 
-    /* Sisu kujundus */
     .blog-content {
       font-size: 1.25rem;
       line-height: 1.7;
-      text-align: justify; /* Valikuline: annab "raamatu" tunde */
+      text-align: justify;
       hyphens: auto;
     }
 
@@ -93,7 +87,6 @@
       margin-bottom: 1.6rem;
     }
 
-    /* Tsitaat */
     .blog-content blockquote {
       margin: 3rem 0;
       padding: 1rem 2rem;
@@ -104,7 +97,6 @@
       background: #fdfaf3;
     }
 
-    /* Nimekiri */
     .blog-content ul {
       list-style: none;
       padding: 1.5rem;
@@ -117,7 +109,26 @@
       position: relative;
     }
 
-    /* Jalus ja lingid */
+    /* COMMENTS SECTION STYLING */
+    .comments-wrapper {
+      margin-top: 5rem;
+      padding-top: 3rem;
+      border-top: 1px solid #eee;
+    }
+
+    .comments-wrapper h3 {
+      font-family: 'Forum', serif;
+      font-size: 2rem;
+      color: var(--text-dark);
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Customizing the Cusdis look to match your site */
+    #cusdis_thread {
+      --cusdis-primary-color: var(--gold) !important;
+    }
+
     .back-to-blog {
       display: inline-block;
       margin: 4rem 0;
@@ -128,9 +139,7 @@
       transition: opacity 0.3s;
     }
 
-    .back-to-blog:hover {
-      opacity: 0.7;
-    }
+    .back-to-blog:hover { opacity: 0.7; }
 
     footer {
       text-align: center;
@@ -140,68 +149,16 @@
       font-size: 0.9rem;
     }
 
-    a {
-      color: var(--gold);
-      text-decoration: underline;
-    }
+    a { color: var(--gold); text-decoration: underline; }
 
-    /* MOBIILI KOHANDUSED */
     @media (max-width: 600px) {
-      .blog-header h1 {
-        font-size: 2.2rem;
-      }
-      .blog-content {
-        font-size: 1.15rem;
-        text-align: left; /* Mobiilis on vasakule joondus mugavam */
-      }
-      .blog-header {
-        padding: 1.5rem 0;
-      }
+      .content-spacer { height: 70px; }
+      .blog-header h1 { font-size: 2.2rem; }
+      .blog-content { font-size: 1.15rem; text-align: left; }
     }
 
-    a, h1, h2, h3, h4, h5, h6, p {
-      font-weight: 400;
-    }
-
-    header.site-header {
-    position: relative;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: var(--bg-soft);
-    height: 60px; /* adjust as needed */
-    }
-
-    header.blog-header {
-        position: relative; /* better than fixed for scrolling */
-        z-index: 900;
-        background-color: var(--bg-soft);
-        padding: 1rem 0;
-    }
-
-    /* Fix for the Main Site Header spacing */
-    .content-spacer {
-      height: 80px; /* Adjust this to match the height of your main site header */
-    }
-
-    /* Refined Blog Header - No longer fixed, making it part of the page flow */
-    .blog-header {
-      text-align: center;
-      padding: 2rem 0 3rem 0; /* Adds elegant breathing room */
-      background-color: transparent;
-      width: 100%;
-    }
-
-    .blog-header h1 {
-      font-family: 'Forum', serif;
-      font-size: 3rem;
-      margin: 0.5rem 0;
-      font-weight: 400;
-      line-height: 1.1;
-      color: var(--text-dark);
-    }
-
-    /* Optional: Add a subtle divider between header and image */
+    .content-spacer { height: 80px; }
+    
     .blog-header::after {
       content: "";
       display: block;
@@ -211,17 +168,11 @@
       margin: 1.5rem auto 0;
     }
 
-    @media (max-width: 600px) {
-      .content-spacer { height: 70px; }
-      .blog-header h1 { font-size: 2.2rem; }
-      .blog-header { padding: 1rem 0 2rem 0; }
-    }
-
   </style>
 </head>
 <body>
 
-      <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: var(--bg-soft);">
       <div class="logo" style="position: relative;">
         <a href="/">
           <img src="../pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
@@ -243,13 +194,14 @@
     <div class="content-spacer"></div>
 
     <main class="blog-container">
-      <header class="blog-header" style="box-shadow: none;">
+      <header class="blog-header" style="box-shadow: none; position: relative; z-index: 0;">
         <span class="blog-meta">12. jaanuar 2026</span>
         <h1>Minu Sri Lanka 2026</h1>
       </header>
 
       <img src="../pics/blogi1_SL.jpg" alt="Sri Lanka reis" class="blog-featured-image">
-    <article class="blog-content">
+      
+          <article class="blog-content">
       <p>
         Siin on lugu minu järjekordse unistuse täitumisest - veeta kodumaisest külmast perioodist osa soojas. Elu premeerib julgust ja südame järgi tehtud valikuid väga armulikult.
       </p>
@@ -300,16 +252,28 @@
       </p>
     </article>
 
-    <div style="text-align: center;">
-      <a href="../blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
-    </div>
+      <section class="comments-wrapper">
+        <h3>Kommentaarid</h3>
+        <div id="cusdis_thread"
+          data-host="https://cusdis.com"
+          data-app-id="REPLACE_WITH_YOUR_APP_ID"
+          data-page-id="sri-lanka-2026"
+          data-page-url="https://hingeaednik.ee/blogi/sri-lanka-2026"
+          data-page-title="Minu Sri Lanka 2026"
+          data-theme="light">
+        </div>
+        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+      </section>
 
-  </main>
+      <div style="text-align: center;">
+        <a href="../blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
+      </div>
+    </main>
 
-  <footer>
-    &copy; 2026 Hingeaednik | Kõik õigused kaitstud
-  </footer>
+    <footer>
+      &copy; 2026 Hingeaednik | Kõik õigused kaitstud
+    </footer>
 
-  <script src="../main.js"></script>
+    <script src="../main.js"></script>
 </body>
 </html>
