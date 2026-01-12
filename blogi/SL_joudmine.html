@@ -114,6 +114,9 @@
       margin-top: 5rem;
       padding-top: 3rem;
       border-top: 1px solid #eee;
+      width: 100%;
+      display: block;
+      clear: both;
     }
 
     .comments-wrapper h3 {
@@ -126,7 +129,17 @@
 
     /* Customizing the Cusdis look to match your site */
     #cusdis_thread {
+      min-height: 500px;
+      width: 100%;
+      margin-bottom: 2rem;
+      overflow: visible !important;
       --cusdis-primary-color: var(--gold) !important;
+    }
+
+    #cusdis_thread iframe {
+        width: 100% !important;
+        min-height: 500px;
+        border: none;
     }
 
     .back-to-blog {
@@ -252,18 +265,18 @@
       </p>
     </article>
 
-      <section class="comments-wrapper">
-        <h3>Kommentaarid</h3>
-        <div id="cusdis_thread"
-          data-host="https://cusdis.com"
-          data-app-id="REPLACE_WITH_YOUR_APP_ID"
-          data-page-id="sri-lanka-2026"
-          data-page-url="https://hingeaednik.ee/blogi/sri-lanka-2026"
-          data-page-title="Minu Sri Lanka 2026"
-          data-theme="light">
-        </div>
-        <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
-      </section>
+    <section class="comments-wrapper">
+      <h3>Kommentaarid</h3>
+      <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="0ccd2362-1b3f-49a9-9c25-983de0a547c1"
+        data-page-id="sri-lanka-post-1"
+        data-page-url="https://hingeaednik.ee/blogi/SL_joudmine.html"
+        data-page-title="Minu Sri Lanka 2026"
+        data-theme="light">
+      </div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    </section>
 
       <div style="text-align: center;">
         <a href="../blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
