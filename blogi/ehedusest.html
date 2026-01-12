@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minu Sri Lanka 2026 – Hingeaednik.ee</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    :root {
+      --gold: #b3925d; /* Mahe kuldne toon */
+      --text-dark: #2c2c2c;
+      --text-light: #666;
+      --bg-soft: #fcfbf7;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-soft);
+      font-family: 'Forum', serif; /* Loetavam ja elegantsem põhitekst */
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Peamine konteiner */
+    .blog-container {
+      max-width: 750px;
+      margin: 0 auto;
+      padding: 2rem 1.2rem;
+    }
+
+    /* Pealkirja sektsioon - parandatud mobiilile */
+    .blog-header {
+      text-align: center;
+      /* padding: 3rem 0; */
+    }
+
+    .blog-header h1 {
+      font-family: 'Forum', serif;
+      font-size: 2.8rem;
+      margin: 0.5rem 0;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--text-dark);
+    }
+
+    .blog-meta {
+      font-family: 'Forum', serif;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Kaanepilt */
+    .blog-featured-image {
+      width: 100%;
+      height: auto;
+      border-radius: 4px; /* Pehmem nurk */
+      box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+      margin-bottom: 3rem;
+      display: block;
+    }
+
+    /* Sisu kujundus */
+    .blog-content {
+      font-size: 1.25rem;
+      line-height: 1.7;
+      text-align: justify; /* Valikuline: annab "raamatu" tunde */
+      hyphens: auto;
+    }
+
+    .blog-content h2 {
+      font-family: 'Forum', serif;
+      color: var(--gold);
+      margin: 3rem 0 1.5rem 0;
+      font-size: 2rem;
+      font-weight: 400;
+      border-bottom: 1px solid #eee;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .blog-content p {
+      margin-bottom: 1.6rem;
+    }
+
+    /* Tsitaat */
+    .blog-content blockquote {
+      margin: 3rem 0;
+      padding: 1rem 2rem;
+      border-left: 2px solid var(--gold);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: #555;
+      background: #fdfaf3;
+    }
+
+    /* Nimekiri */
+    .blog-content ul {
+      list-style: none;
+      padding: 1.5rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+    }
+
+    .blog-content li {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    /* Jalus ja lingid */
+    .back-to-blog {
+      display: inline-block;
+      margin: 4rem 0;
+      text-decoration: none;
+      color: var(--gold);
+      font-family: 'Forum', serif;
+      font-size: 1.2rem;
+      transition: opacity 0.3s;
+    }
+
+    .back-to-blog:hover {
+      opacity: 0.7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 4rem 1rem;
+      font-family: 'Forum', serif;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    /* MOBIILI KOHANDUSED */
+    @media (max-width: 600px) {
+      .blog-header h1 {
+        font-size: 2.2rem;
+      }
+      .blog-content {
+        font-size: 1.15rem;
+        text-align: left; /* Mobiilis on vasakule joondus mugavam */
+      }
+      .blog-header {
+        padding: 1.5rem 0;
+      }
+    }
+
+    a, h1, h2, h3, h4, h5, h6, p {
+      font-weight: 400;
+    }
+  </style>
+</head>
+<body>
+
+      <header style="position: fixed; top: 0; width: 100%; z-index: 1000;">
+      <div class="logo" style="position: relative;">
+        <a href="/">
+          <img src="../pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Avaleht</a></li>
+          <li><a href="../teenused.html">Teenused</a></li>
+          <li><a href="../blogi.html">Blogi</a></li>
+          <li><a href="../kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+  <main class="blog-container">
+    
+    <header class="blog-header" style="position: fixed; box-shadow: none;">
+      <span class="blog-meta">12. jaanuar 2026</span>
+      <h1>Minu Sri Lanka 2026</h1>
+    </header>
+
+    <img src="../pics/blogi1_SL.jpg" alt="Sri Lanka reis" class="blog-featured-image">
+
+    <article class="blog-content">
+      <p>
+        Siin on lugu minu järjekordse unistuse täitumisest - veeta kodumaisest külmast perioodist osa soojas. Elu premeerib julgust ja südame järgi tehtud valikuid väga armulikult.
+      </p>
+
+      <blockquote>
+        Jooksvalt täienev reisikiri
+      </blockquote>
+
+      <h2>Jõudmine</h2>
+      
+      <p>
+        Taimed ja kass asenduskodusse viidud, lapsed isa juures, maja talveks “konserveeritud” – meie 17h pikkune lennureis Sri Lankale võis alata! Külmataat on jaanuari alguseks peo kodumaal püsti pannud ja tulistab üle -10 kraadiseid temperatuure.
+      </p>
+      
+      <p>
+        Väljalennud hilinevad keeruliste talveolude tõttu – lennuki jäätumise ennetamiseks on vaja need jäätõrjevahendiga üle pritsida. Kui Riia lennujaamas pritsiti üle vaid tiivad, siis Tallinn-Riia lennuk saab terves ulatuses sellise töötlemise osaliseks. Nii saamegi Riias lennukist välja sel kellaajal, kui meie järgmine lennuk peaks hakkama juba stardijoone poole vurama.
+      </p>
+
+      <p>
+        Õnneks on Dubaisse minejaid veelgi ja meid oodatakse ilusti ära. Lihtsamaks ei tee asjaolu, et peame reaalselt ühest lennujaama otsast teise kimama. Noh, tegelikult me võtsime seda kõike siiski rahulikult, sest näeme, et soojale maale minejate seas on ka peresid väikeste lastega – kui nemad ei muretse, siis miks peaksime meiegagi kiirustama 😉
+      </p>
+
+      <p>
+        Öö Air Balticu pardal möödub rahutult. Aksel soovib küll nunnusti “häid lennuki unenägusi”, aga jalad on rahutud, õhk on kuiv ja ruumi on vähe. See 6h möödub sisuliselt magamata... Õnneks on mul aknaäärne koht, seega lõbustan end Iraagi öiste mäestike imetlemisega. Taevas on selge, tähed säravad ja põnevust tekitab seegi, et lendame üle Bagdadi! 
+      </p>
+
+      <p>
+        Lõpuks hakkabki päike tõusma! Tugevad oranžikad toonid – kui mahlane ja kaunis vaatepilt! Dubais avame hommikusöögiks enda uhke moonakoti. Sri Lankasse sõidame edasi Emirates pardal. Tõesti on luksuslik ja mugav. Isegi toitu antakse rikkalikult ja piletihinna sees.
+      </p>
+
+      <p>
+        Colombosse on õigeaegselt jõudnud ka meie pagas. Viisad tehtud ja pääsemegi riiki. Meile on ilusti vastu tuldud. Kohalikud SIM-kaardid telefonidesse ja kiiresti taksosse. Esimesed kolm ööd olemegi Colombos. Vastuvõtt hotellis on väga viisakas, kuigi esimene emotsioon toast on pigem nostalgiline: "nagu Laulasmaa Spa 1994." 
+      </p>
+
+      <p>
+        Uskumatu, aga meie saarerännak ongi alanud! 🇱🇰
+      </p>
+
+      <ul>
+        <li>👉 <strong>Lennupiletid:</strong> Saab piisava varuga ette ostetuna väga mõistliku raha eest.</li>
+        <li>👉 <strong>Lennufirma:</strong> Mugavuse huvides soovitame Emirates'i.</li>
+        <li>👉 <strong>Mobiilside:</strong> Lülita rändlus välja juba enne EL-ist lahkumist.</li>
+      </ul>
+
+      <p>
+        📷 Sri lanka pildialbumi leiad <a href="https://photos.app.goo.gl/QsRgCa3AUABmQfnq5" target="_blank">siit</a>.<br>
+        ✍️ Kommenteeri või jaga oma mõtteid all!
+      </p>
+    </article>
+
+    <div style="text-align: center;">
+      <a href="blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
+    </div>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Hingeaednik | Kõik õigused kaitstud
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>
