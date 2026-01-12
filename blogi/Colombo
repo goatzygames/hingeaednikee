@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colombo – Hingeaednik.ee</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="blog-styles.css">
+
+</head>
+<body>
+
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: var(--bg-soft);">
+      <div class="logo" style="position: relative;">
+        <a href="/">
+          <img src="../pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Avaleht</a></li>
+          <li><a href="../teenused.html">Teenused</a></li>
+          <li><a href="../blogi.html">Blogi</a></li>
+          <li><a href="../kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <div class="content-spacer"></div>
+
+    <main class="blog-container">
+    <header class="blog-header" style="background: transparent; box-shadow: none; position: relative; z-index: 0;">
+      <h1>Minu Sri Lanka 2026</h1>
+      <h2 class="blog-meta">13. jaanuar 2026</h2>
+    </header>
+
+    <br><br>
+
+      <img src="../pics/blogi2_Colombo.jpg" alt="Colombo päev" class="blog-featured-image">
+      
+          <article class="blog-content">
+      <p>
+       Colombos, saareriigi pealinnas, veedame kokku 3 ööd ja 2 täispikka päeva. 
+      </p>
+
+      <blockquote>
+        Jooksvalt täienev reisikiri (2)
+      </blockquote>
+
+      <h2>Colombo</h2>
+      
+            <p>
+            Esimese öö magame nagu beebid – hommikul on näol õnnis naeratus, sest mitte miski ei seganud me ööund. Väljapuhanud tundega liigume oma pesahotelli (The Den 23) katusele kohalikku hommikusöögikomplekti tellima. Lauale tuuakse väga palju asju: värskelt pressitud puuviljamahl, omlett kahest munast, dahl, kartulikarri, kalakarri, kookospiimaga vormitud riisikuubikud, mingid pätsid (leiva eest), puuviljalõigud ja vesi-kohv-tee. Kohvi tehakse siin peenest pulbrist, mis settib tassi põhja, ja sellele piima lisades muudab värvi halliks. Nimetame selle hellalt mudakohviks. Palju asju suudame ikkagi ära süüa, sest tõesti on maitsev, aga pikaks ajaks on kõht igal juhul väga täis. Lennureisist taastuvatele igatahes väga kosutav.</p>
+<p>Teenindajad, aga ka muidu mööduvad inimesed, nii noored kui vanad, on igal sammul mega sõbralikud ja naeratavad. Kusjuures sinuga otsitaksegi silmsidet, ja kui su pilk nende omaga ristub, saadavad nad su poole naeratuse täis siirast, lapselikku rõõmu. </p>
+<p>Teise päeva hommikul seame PickMe äpiga tellitud tuktuki nina Kathiresan nimelise kunstitaiesena mõjuva hinduistliku templi suunas, kuna see pannakse kl 10:30 kinni, et uksed taas õhtupoolikul avada. Kuigi hinduistlik traditsioon jääb meile kaugeks, olime tänulikud, et saime pealt vaadata siinse hindude kogukonna kombetalitust. Ilus, kuidas naised on kenasti kleitides - kes India, kes Sri Lanka saris, nägudel pühalik ilme, igaüks pühendunult oma sisemaailma fookuse palvesse põiminud. Ja templis on rohkem mehi kui naisi! Ükskõik, millise jumaluse suunas inimene oma heasoovlikud palved saadab, loob see inimesse usku, lootust, headust, ja see on ilus.</p>
+<p>Helgusest täidetuna hakkame otsima kohta, kus süüa hommikut. Peagi märkan üle tee Amrithaa taimetoidu restorani, mis on selgelt kohalikele suunatud ja tõeliselt ehe koht. Astume sisse ja vaatame otsa mega suurele menüüle, kus on kirjas justkui kõik kohalikud toidud, aga peale Masala Tea võime ainult aimata ülejäänud kirjete sisu. Vaatame suud ammuli ringi, mida teised on tellinud ja vabandame teenindaja ees, et oleme linnas täitsa “new”. Ühed kliendid söövad suuri õhukesi ja tumedama tooniga pannkooke ja palun midagi sellist ka meile. Mees võtabki ohjad üle ja toob meile mõne aja pärast valiku erinevaid asju. Lisaks pannkoogile, mille poolitame, on lauale toodud mitu erinevat (teravat!) kastet ja veel mingeid pirukalaadseid tooteid. OK! Maitseelamused on kastmete näol garanteeritud ja kõik muu sinna kõrvale käiv, st erinevad põnevad jahu- ja riisitooted siis selle võrra mahedamad. Tuvastasime, et tumedad pannkoogid tehakse punasest riisist – valin ka edaspidi tavalise valge riisi asemel just punast, mis on pisut kallim, aga peaks olema tervislikum.</p>
+<p>Ajaloolisi hetki. Sel päeval sõidan ma esimest korda tuktukiga. Kastsin oma jalad esimest korda India ookeanisse. Samuti ei olnud ma varem pidanud läbima turvakontrolli selleks, et siseneda kaubanduskeskusesse (One Galle Mall)… Külastasin esimest korda stuupat, mille ümbruses asus tihe liiklussõlm, Sri Lanka valitsushoone ja Hiltoni hotell. Õhtul sain ka esimest korda King Coconut’i nimelist kookospähklit juua. Mida päev! 😉</p>
+<p>Samal õhtul osaleme Kalaniya Durutha Perahara nimelisel usu- ja traditsioonide pühitsemise festivalil (see oli ka põhjuseks, miks me valisime jääda esmalt paariks päevaks Colombosse). See sündmus tähistab Buddha esimest saare külastust, mida peetakse juba 1927. aastast alates ning on ühtlasi üheks olulisemaks kohaliku rahva budismi festivaliks. Festival vältab kolm päeva ja väidetavalt on kolmas kõige suursugusem ja ainus, kuhu müüakse ka pileteid. Meie valisime osaleda teisel päeval, mis tundus olevat kui peaproov. Loomulikult pimedas ja koos valgusshowga. Tol õhtul nägime väga üksikuid teisi välismaalasi, aga meie jäime väga rahule.</p>
+<p>Tempel ja templiala ise olid imeilusalt kaunistatud valged valgusketid üle terve templi ja stuupa, kobarais viirukid levitamas sulnist aroomi, paljud inimesed olid üleni valgesse rõivastunud, sai osta kauneid lootoseõisi, mida annetada jumalustele ja paluda palves õnnistust. Istuti ka piknikuteki peal ja palvetati õlg-õla kõrval. Pühalik ja sõbralik atmosfäär. </p>
+<p>Templialal, mis antud juhul oli täiesti liivane, käiakse paljajalu, ja kuigi me seda teadsime ja olime hommikul Kathiresani templis seda juba praktiseerinud, siis kohapealne lõi meid pehmelt öeldes tummaks ja nii me seal jalanõudes patseerisime, kuni üks noor tütarlaps tuli Tomi õlale koputama, et lahkelt öelda “sir, you have to take off your shoes here”. Piinlik lugu, aga samas ka omamoodi armas.  </p>
+<p>Protsessioon ise algas kl 21 (mida me ei teadnud ehk ootasime oma 1,5h) ja kestis 1h 20 min. Erinevad tantsijad, tuleshow, muusika, trummarid, kaunistatud elevandid. Kõige uhkemalt rüütatuna tuli meie ette Kandula-nimeline elevant, kes oli kingitud antud protsessiooni korraldavale Kelaniya templile Tai kuninga poolt nüüdseks 22 aastat tagasi kui vants oli alles 9-aastane. Seda elevanti peetakse pühaks ja armastatakse nii väga, et tema jalakesed astusid valgel linal, mis tema ette jooksvalt sätiti. </p>
+<p>Mul endal oli elevantidega seoses muidugi vastakad tunded, saatsin nende poole pidevalt valgust ja armastust. Tänasin õhtul magama jäädes elevante, et nad nii kannatlikult on inimest teeninud ja samas saatsin teele ka palve, et nad saaksid peagi taas elada neile loomuomasemas keskkonnas ja rütmis.</p>
+
+            <p>
+        📷 Sri Lanka pildialbumi leiad <a href="https://photos.app.goo.gl/QsRgCa3AUABmQfnq5" target="_blank">siit</a>.<br>
+        ✍️ Kommenteeri või jaga oma mõtteid all!
+      </p>
+    </article>
+
+    <section class="comments-wrapper">
+      <h3>Kommentaarid</h3>
+      <div id="cusdis_thread"
+        data-host="https://cusdis.com"
+        data-app-id="0ccd2362-1b3f-49a9-9c25-983de0a547c1"
+        data-page-id="sri-lanka-post-1"
+        data-page-url="https://hingeaednik.ee/blogi/SL_joudmine.html"
+        data-page-title="Minu Sri Lanka 2026"
+        data-theme="light">
+      </div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
+    </section>
+
+      <div style="text-align: center;">
+        <a href="../blogi.html" class="back-to-blog">← Tagasi blogi avalehele</a>
+      </div>
+    </main>
+
+    <footer>
+      &copy; 2026 Hingeaednik | Kõik õigused kaitstud
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
