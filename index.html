@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
   <meta name="description" content="Hingega luues. Südamest tegutsedes." />
   <meta name="keywords" content="aednik, aiandus, eneseareng, mentor, jooga" />
   <meta name="author" content="Hingeaednik" />
@@ -17,81 +16,124 @@
   <meta property="og:title" content="Jooga | Mentor | Aednik" />
   <meta property="og:image" content="https://i.ibb.co/5mvFQ80/Logo-mmargune-tekstita-Photoroom.png" />
 
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Forum&family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="blogi/blog-styles.css">
 
   <style>
-    /* New structural helper classes to replace <br> and inline styles */
-    .text-container {
-      margin: 0 20%;
-      text-align: center;
+    /* Specific overrides for the homepage layout */
+    body {
+      font-family: 'EB Garamond', serif;
+      line-height: 1.6;
     }
+    
+    .home-featured-image {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 2rem auto;
+    }
+
     .intro-list {
       list-style: none;
       padding: 0;
-      font-size: 1.2rem;
       margin: 2rem 0;
+      font-style: italic;
     }
+
     .service-list {
-      text-align: left;
+      list-style: none;
+      padding: 0;
       display: inline-block;
-      font-size: 1.1rem;
+      text-align: left;
+      border-left: 2px solid var(--accent-color, #d4a373);
+      padding-left: 1rem;
+      margin-top: 1rem;
     }
-    /*
-    #img_main {
-      width: 60%;
-      height: auto;
-      border-radius: 8px;
+
+    .button-group {
+      margin-top: 3rem;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-    */
-    .flex-center {
+
+    .poem-section {
+      background-color: rgba(0,0,0,0.02);
+      padding: 3rem;
+      border-radius: 15px;
+      margin-top: 4rem;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 20px;
-      padding: 4rem 0;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .poem-section {
+        flex-direction: column;
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="main-header-insert"></div>
+    <header style="position: fixed; top: 0; width: 100%; z-index: 1000; background-color: var(--bg-soft);">
+      <div class="logo">
+        <a href="/">
+          <img src="pics/Logo_ümmargune_tekstita-Photoroom.png" alt="Site Logo">
+        </a>
+      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/">Avaleht</a></li>
+          <li><a href="teenused.html">Teenused</a></li>
+          <li><a href="blogi.html">Blogi</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
 
-  <div class="content-spacer"></div>
+    <div class="content-spacer"></div>
 
-  <main>
-    <section class="hero image-section" id="section-1">
-      <img src="pics/Kelli 2025.jpg" alt="Kelli - Hingeaednik" id="img_class" style="width: 60%; height: auto; border-radius: 8px;"/>
-    </section>
+    <main class="blog-container">
+      <header class="blog-header" style="background: transparent; box-shadow: none;">
+        <h1>Hingeaednik</h1>
+      </header>
 
-    <section class="hero text-section" id="section-2">
-      <h1>Hingeaednik</h1>
-      
-      <div class="text-container">
+      <img src="pics/Kelli 2025.jpg" alt="Kelli - Hingeaednik" class="home-featured-image" />
+
+      <article class="blog-content">
         <p>
-          Olen Kelli. Minu eneseareng sai hoo tiibadesse kui otsustasin vabastada end rahulolematust, 
+          Olen Kelli. Minu eneseareng sai hoo tiibadesse, kui otsustasin vabastada end rahulolematust, 
           kannatusi ja piiratust tekitavatest kihtidest. Tegin aastaid tagasi taotluse tunda elust rõõmu, 
           leida tegevused, mis on minu jaoks tähendusrikkad ja olla päriselt õnnelik, iga päev.
         </p>
+        
         <p>
-          Teadlikkus endast ja oma vajadustest hakkas arenema kui elu mind korralikult küpsetas ja kui intuitsioon viis mind kokku joogaga. Pannes kehas energia liikuma 
+          Teadlikkus endast ja oma vajadustest hakkas arenema, kui elu mind korralikult küpsetas ja kui intuitsioon viis mind kokku joogaga. Pannes kehas energia liikuma 
           ning pärides endalt nii elu mõtte kui inimeseks olemise kohta, hakkasin töötama läbi enda uskumusi ja mustreid ning kild killu haaval kokku panema oma tõde.
         </p>
         
-        <p><strong>Jagan lahkelt enda teelt kogutud tarkusi!</strong></p>
+        <p style="text-align: center; font-size: 1.2rem;"><strong>Jagan lahkelt enda teelt kogutud tarkusi!</strong></p>
         
-        <div class="credentials">
-
-          <ul class="intro-list">
-            <li>Rahvusvaheliselt sertifitseeritud kundalini jooga õpetaja (2018)</li>
-            <li>Kogemusnõustaja (Loov Ruum OÜ, 2021)</li>
-            <li>Aednik, tase 4 (Räpina Aianduskool, 2025)</li>
-          </ul>
-        </div>
+        <ul class="intro-list" style="text-align: center;">
+          <li>Rahvusvaheliselt sertifitseeritud kundalini jooga õpetaja (2018)</li>
+          <li>Kogemusnõustaja (Loov Ruum OÜ, 2021)</li>
+          <li>Aednik, tase 4 (Räpina Aianduskool, 2025)</li>
+        </ul>
 
         <p class="meeting-info">
-          Minuga on võimalik kohtuda enesearengut käsitlevate mentorkohtumiste käigus või kutsudes mind oma aeda aednikuks.
+          Minuga on võimalik kohtuda enesearengut käsitlevate mentorkohtumiste käigus või kutsudes mind oma aeda aednikuks:
         </p>
 
         <ul class="service-list">
@@ -99,44 +141,40 @@
           <li>• Enesearengu tugigrupi kohtumised</li>
           <li>• Aiahooldus ja nõustamine</li>
         </ul>
-      </div>
 
-      <div class="button-group">
-        <button class="openTeenused">Teenused</button>
-        <a href="kontakt.html"><button id="cta-1">Võta minuga ühendust</button></a>
-      </div>
-    </section>
+        <div class="button-group">
+          <button class="openTeenused" style="padding: 12px 24px; cursor: pointer;">Loe teenustest</button>
+          <a href="kontakt.html"><button id="cta-1" style="padding: 12px 24px; cursor: pointer;">Võta minuga ühendust</button></a>
+        </div>
 
-    <section class="hero flex-center" id="section-3">
-      <div class="text-block" style="font-size: 1.5rem; padding: 2rem;">
-        <h2>Unistused</h2>
-        <p>
-          Mul on unistusi, mille poole liigun,<br>
-          samas elan oma unistuse sees.<br>
-          Mul on usku, lootust, elutahet,<br>
-          mida iga päev elustan.<br>
-          Elu on elus ja see on peamine<br> 
-          ja püha on see inimeseks olemine!
-        </p>
-      </div>
-      <img src="pics/Ostara.jpg" alt="Ostara sümbol" style="width: 30%;" id="img_class">
-    </section>
-  </main>
+        <section class="poem-section">
+          <div class="text-block" style="flex: 1;">
+            <h2 style="font-family: 'Forum', serif;">Unistused</h2>
+            <p style="font-style: italic; font-size: 1.1rem;">
+              Mul on unistusi, mille poole liigun,<br>
+              samas elan oma unistuse sees.<br>
+              Mul on usku, lootust, elutahet,<br>
+              mida iga päev elustan.<br>
+              Elu on elus ja see on peamine<br> 
+              ja püha on see inimeseks olemine!
+            </p>
+          </div>
+          <img src="pics/Ostara.jpg" alt="Ostara sümbol" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover;">
+        </section>
+      </article>
+    </main>
 
-  <footer>
-    &copy; 2025 Hingeaednik
-  </footer>
+    <footer style="margin-top: 5rem;">
+      &copy; 2026 Hingeaednik | Kõik õigused kaitstud
+    </footer>
 
-  <script src="main.js"></script>
-  <script>
-    // Applying the listener to all buttons with this class
-    document.querySelectorAll(".openTeenused").forEach(btn => {
-      btn.addEventListener("click", () => {
-        window.location.href = "services.html";
+    <script src="main.js"></script>
+    <script>
+      document.querySelectorAll(".openTeenused").forEach(btn => {
+        btn.addEventListener("click", () => {
+          window.location.href = "teenused.html";
+        });
       });
-    });
-  </script>
+    </script>
 </body>
-
 </html>
-
