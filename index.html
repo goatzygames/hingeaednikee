@@ -27,7 +27,7 @@
   <style>
     /* Specific overrides for the homepage layout */
     body {
-      font-family: 'EB Garamond', serif;
+      font-family: 'Forum', serif;
       line-height: 1.6;
     }
     
@@ -81,6 +81,79 @@
         padding: 1.5rem;
       }
     }
+
+    .horizontal-together {
+    display: flex;
+    flex-wrap: wrap;       /* Allows stacking on small screens */
+    gap: 2rem;             /* Space between the two lists */
+    align-items: center;   /* Centers them vertically relative to each other */
+    justify-content: center; /* Centers the whole block horizontally */
+    margin-top: 1.5rem;
+  }
+
+  .horizontal-together > ul {
+    flex: 1;               /* Distributes space equally */
+    min-width: 280px;      /* Forces stacking when a list has less than 280px space */
+    margin: 0;             /* Reset margins for better alignment */
+  }
+
+  /* Optional: Adjust text alignment for mobile responsiveness */
+  @media (max-width: 768px) {
+    .horizontal-together {
+      text-align: center;
+    }
+    
+    .service-list {
+      border-left: none;    /* Remove side border on mobile if it looks crowded */
+      padding-left: 0;
+    }
+  }
+
+    /* Container for both lists */
+  .horizontal-together {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  /* Unified styling for both lists */
+  .service-list, 
+  .intro-list {
+    flex: 1;
+    min-width: 300px; /* Forces stack on mobile */
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+    
+    /* Visual consistency */
+    border-left: 2px solid #d4a373; /* The accent color */
+    background-color: rgba(212, 163, 115, 0.05); /* Very light tint for depth */
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  /* Target the list items specifically */
+  .service-list li, 
+  .intro-list li {
+    margin-bottom: 0.8rem;
+    position: relative;
+  }
+
+  /* Clean up the second list's specific inline style from HTML */
+  .intro-list {
+    font-style: normal !important; /* Overriding your previous italic if desired */
+  }
+
+  @media (max-width: 600px) {
+    .service-list, 
+    .intro-list {
+      min-width: 100%;
+      border-left: 3px solid #d4a373;
+    }
+  }
+    
   </style>
 </head>
 <body>
@@ -125,13 +198,10 @@
           ning pärides endalt nii elu mõtte kui inimeseks olemise kohta, hakkasin töötama läbi enda uskumusi ja mustreid ning kild killu haaval kokku panema oma tõde.
         </p>
         
-        <p style="text-align: center; font-size: 1.2rem;"><strong>Jagan lahkelt enda teelt kogutud tarkusi!</strong></p>
-        
-        <ul class="intro-list" style="text-align: center;">
-          <li>Rahvusvaheliselt sertifitseeritud kundalini jooga õpetaja (2018)</li>
-          <li>Kogemusnõustaja (Loov Ruum OÜ, 2021)</li>
-          <li>Aednik, tase 4 (Räpina Aianduskool, 2025)</li>
-        </ul>
+        <section class="poem-section">
+          <div class="text-block">
+            <h2 style="font-family: 'Forum', serif;">Jagan lahkelt enda teelt kogutud tarkusi!</h2>
+        <p style="text-align: center; font-size: 1.2rem;"><strong></strong></p>
 
         <p class="meeting-info">
           Minuga on võimalik kohtuda enesearengut käsitlevate mentorkohtumiste käigus või kutsudes mind oma aeda aednikuks:
@@ -142,6 +212,19 @@
           <li>• Enesearengu tugigrupi kohtumised</li>
           <li>• Aiahooldus ja nõustamine</li>
         </ul>
+
+        <p class="meeting-info">
+          Minu 
+        </p>
+
+        <ul class="intro-list">
+          <li>Rahvusvaheliselt sertifitseeritud kundalini jooga õpetaja (2018)</li>
+          <li>Kogemusnõustaja (Loov Ruum OÜ, 2021)</li>
+          <li>Aednik, tase 4 (Räpina Aianduskool, 2025)</li>
+        </ul>
+        
+        </div>
+        </section>
 
         <div class="button-group">
           <button class="openTeenused" style="padding: 12px 24px; cursor: pointer;">Loe teenustest</button>
