@@ -162,4 +162,11 @@
     }
 
     .content-spacer { height: 80px; }
+
+    #blog-section-header
+    {
+        margin: 0rem; !important
+        margin-bottom: 0rem; !important
+        margin-top: 0rem; !important
+    }
     
