@@ -170,3 +170,8 @@
         margin-top: 0rem; !important
     }
     
+
+    blockquote p
+    {
+        margin: 0rem 0rem; !important
+    }
